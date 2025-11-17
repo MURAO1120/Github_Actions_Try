@@ -1,14 +1,11 @@
 name: Manual Hello Workflow
 
 on:
-  workflow_dispatch:  # UIから手動実行できるトリガー
+  workflow_dispatch:  # UIから手動実行
 
 jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Print Hello Message
-        run: echo "Hello from GitHub Actions!"
+        run: echo "Hello! This workflow was triggered manually."
