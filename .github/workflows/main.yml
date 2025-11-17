@@ -1,0 +1,10 @@
+name: Manual Hello Workflow
+
+on:
+  workflow_dispatch:  # UIから手動実行できるトリガー
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello Message
