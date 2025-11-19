@@ -1,7 +1,11 @@
 name: learn-github-actions
 on: [push]
+
 jobs:
-  check-bats-version:
+  create-text-file:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World"
+      - name: Create example.txt
+        run: |
+          echo "This is a test file." > example.txt
+          echo "GitHub Actions created this file." >> example.txt
